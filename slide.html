@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #F2FBE0;
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            display: inline-block;
+            align-items: center;
+        }
+
+        #pyramid {
+            margin-top: 50px;
+            padding: 55px;
+            /*border-style: solid;*/
+            border-width: thick;
+            /*border-color: #2980b9;*/
+            border-radius: 5px 20px 5px;
+            background-color:#837A75;
+
+            color: #DAFEB7;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+
+
+
+        h1{
+            color:#837A75;
+
+        }
+        label{
+            color:#837A75 ;
+            font-weight: bolder;
+            font-size: 25px
+        }
+
+        select{
+            color:#D8A48F;
+            font-size: 25px;
+            background-color:#F2FBE0;
+            border: none;
+        }
+        select:focus{
+            background-color: ;
+            border: none;
+            color: ;
+            font-size: 25px;
+            border: none;
+
+        }
+
+
+        input[type=range]{
+        -webkit-appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 4px;
+        background:#837A75;
+        border: none;
+        margin-top: -17;
+
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background: #D8A48F;
+        margin-top: -6px;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #837A75;
+    }
+
+        #output {
+            color: #D8A48F;
+            text-align: right;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            margin: 0;
+            font-weight: bolder;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Pyramid Slide</h1>
+        <div id="pyramid-builder">
+            <label for="brick-type">
+                Brick Symbol
+            </label>
+            <select id="brick-type">
+                    <option value="#">#</option>
+                    <option value ="@">@</option>
+                    <option value ="X">X</option>
+                    <option value ="$">$</option>
+                </select>
+
+
+            <label for="height">
+                How High?
+            </label>
+
+            <input type="range" id="height" min="1" max="20" step="1" value="11">
+
+        </div>
+        <div id="pyramid">
+        </div>
+        <div for="height" id="output">
+        </div>
+
+
+    </div>
+
+
+    <script src="slide.js"></script>
+</body>
+
+</html>
